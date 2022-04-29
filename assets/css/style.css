@@ -9,7 +9,14 @@ body {
     font-style:italic;
     
   }
+  .box {
+      height: 400px;
+    text-align: center;
 
+  }
+.dropdown{
+
+}
 @media screen and (max-width:576px) {
     body{
         background-size: 150%;

@@ -1,71 +1,148 @@
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Query</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/3dd20164be.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Restaurant Query</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
-</head>
-
-<body>
-  <nav class="navbar is-primary has-shadow">
-    <!-- logo / brand -->
-    <div class="navbar-brand">
-      <a class="navbar-item">
-        <img src="./assets/images/restaurant-query.png" style="max-height: 100px" class="py-2 px-2" />
-      </a>
-      <a class="navbar-burger" id="select">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-    </div>
-
-    <div class="navbar-menu" id="nav-links">
-      <!-- right links -->
-      <div class="navbar-end">
-        <a class="navbar-item">Preferences</a>
-        <a class="navbar-item">Select A Resraurant</a>
-        <a class="navbar-item"> Your Favorites</a>
+  <body>
+    <nav class="navbar is-primary has-shadow">
+      <!-- logo / brand -->
+      <div class="navbar-brand">
+        <a class="navbar-item">
+          <img
+            src="./assets/images/restaurant-query.png"
+            style="max-height: 100px"
+            class="py-2 px-2"
+          />
+        </a>
+        <a class="navbar-burger" id="select">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
       </div>
-    </div>
-  </nav>
-  <!-- Sections -->
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-4">
 
-          <h1 class="title is-5 notification is-primary">
-            Restaurant Preferences
-          </h1>
-          <div class="box has-background-primary">
-            <h1>Please Select A Price</h1>
-            <h1>Please Select A Food Catagory</h1>
-            <h1>Please Select A Dietary Restriction</h1>
-          </div>
-        </div>
-        <div class="column is-4">
-          <h1 class="title is-5 notification is-primary">
-            Select A Restaurant
-          </h1>
-          <div class="box has-background-primary"></div>
-
-        </div>
-        <div class="column is-4">
-          <h1 class="title is-5 notification is-primary">
-            Your Favorites
-          </h1>
-          <div class="box has-background-primary">
-           <h1>Insert Favorites Here</h1>
-          </div>
+      <div class="navbar-menu" id="nav-links">
+        <!-- right links -->
+        <div class="navbar-end">
+          <a class="navbar-item">Preferences</a>
+          <a class="navbar-item">Select A Resraurant</a>
+          <a class="navbar-item"> Your Favorites</a>
         </div>
       </div>
-    </div>
-  </section>
-  <section></section>
-  <script src="./assets/js/script.js"></script>
-</body>
+    </nav>
+    <!-- Sections -->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4">
+            <h1 class="title is-5 notification is-primary">
+              Restaurant Preferences
+            </h1>
+            <div class="box has-background-primary">
+              <!--button for please select a price-->
+              <h1>
+                Please Select A Price
+                <div class="dropdown is-active">
+                  <div class="dropdown-trigger">
+                    <button
+                      class="button"
+                      aria-haspopup="true"
+                      aria-controls="dropdown-menu"
+                    >
+                      <span>Price</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item"> $ </a>
+                      <a class="dropdown-item"> $$ </a>
+                      <a href="#" class="dropdown-item is-active"> $$$ </a>
+                    </div>
+                  </div>
+                </div>
+              </h1>
+              <!--Button End/ Please Select A Price End-->
 
+              <h1>
+                Please Select A Food Catagory
+                <div class="dropdown is-active">
+                  <div class="dropdown-trigger">
+                    <button
+                      class="button"
+                      aria-haspopup="true"
+                      aria-controls="dropdown-menu"
+                    >
+                      <span>Food Catagory</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item"> italian </a>
+                      <a class="dropdown-item"> Chinese </a>
+                      <a href="#" class="dropdown-item is-active"> Mexican </a>
+                    </div>
+                  </div>
+                </div>
+              </h1>
+              <h1>
+                Please Select A Dietary Restriction
+                <div class="dropdown is-active">
+                  <div class="dropdown-trigger">
+                    <button
+                      class="button"
+                      aria-haspopup="true"
+                      aria-controls="dropdown-menu"
+                    >
+                      <span>Dietary Restriction</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item"> italian </a>
+                      <a class="dropdown-item"> Chinese </a>
+                      <a href="#" class="dropdown-item is-active"> Mexican </a>
+                    </div>
+                  </div>
+                </div>
+              </h1>
+            </div>
+          </div>
+          <div class="column is-4">
+            <h1 class="title is-5 notification is-primary">
+              Select A Restaurant
+            </h1>
+            <div class="box has-background-primary"></div>
+          </div>
+          <div class="column is-4">
+            <h1 class="title is-5 notification is-primary">Your Favorites</h1>
+            <div class="box has-background-primary">
+              <h1>Insert Favorites Here</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section></section>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
