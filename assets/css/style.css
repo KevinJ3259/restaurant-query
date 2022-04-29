@@ -20,22 +20,26 @@ body {
 @media screen and (max-width:576px) {
     body{
         background-size: 150%;
+        background-repeat: repeat;
         
     }
 }
 @media screen and (max-width:768px) {
     body{
-        background-size:150%
+        background-size:150%;
+        background-repeat: repeat;
     }
 }
 @media screen and (max-width:992px){
     body{
         background-size:150%;
+        background-repeat: repeat;
     }
 }
 @media screen and (max-width:1200px){
     body{
-        background-size:150%
+        background-size:150%;
+        
     }
 }
 @media screen and (max-width:375px){
