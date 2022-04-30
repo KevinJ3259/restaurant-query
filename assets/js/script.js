@@ -2,6 +2,17 @@
 // mobile menu
 const selectIcon = document.querySelector('#select');
 const navbarMenu = document.querySelector('#nav-links');
+const dropdownItems = document.querySelectorAll(".dropdown-item");
+
+dropdownItems.forEach(el => {
+  el.addEventListener("click", (event) => {
+    // const targetId = event.target.dataset.target
+    const targetId = event.target.getAttribute("data-target");
+
+    const targetElement = document.querySelector("#"+targetId);
+    targetElement.textContent = event.target.textContent;
+  })
+})
 
 selectIcon.addEventListener('click', () => {
   navbarMenu.classList.toggle('is-active');

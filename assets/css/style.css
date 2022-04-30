@@ -3,19 +3,15 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
   }
-  p{
-    background-color:#00d1b2;
-    font-weight:bold;
-    font-style:italic;
-    
-  }
+
   .box {
       height: 400px;
     text-align: center;
 
   }
-.dropdown{
-
+h1 {
+    margin:20px !important;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 @media screen and (max-width:576px) {
     body{
@@ -39,7 +35,7 @@ body {
 @media screen and (max-width:1200px){
     body{
         background-size:150%;
-        
+
     }
 }
 @media screen and (max-width:375px){

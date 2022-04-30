@@ -41,7 +41,7 @@
         </div>
       </div>
     </nav>
-    <!-- Sections -->
+    <!-- Sections/ Restaurant Section Start -->
     <section class="section">
       <div class="container">
         <div class="columns">
@@ -52,15 +52,15 @@
             <div class="box has-background-primary">
               <!--button for please select a price-->
               <h1>
-                Please Select A Price
-                <div class="dropdown is-active">
+                Please Select A Price </h1>
+                <div class="dropdown ">
                   <div class="dropdown-trigger">
                     <button
                       class="button"
                       aria-haspopup="true"
                       aria-controls="dropdown-menu"
                     >
-                      <span>Price</span>
+                      <span id="selected-price">Price</span>
                       <span class="icon is-small">
                         <i class="fas fa-angle-down" aria-hidden="true"></i>
                       </span>
@@ -68,25 +68,27 @@
                   </div>
                   <div class="dropdown-menu" id="dropdown-menu" role="menu">
                     <div class="dropdown-content">
-                      <a href="#" class="dropdown-item"> $ </a>
-                      <a class="dropdown-item"> $$ </a>
-                      <a href="#" class="dropdown-item is-active"> $$$ </a>
+                      <a  class="dropdown-item" data-target="selected-price"> $ </a>
+                      <a class="dropdown-item" data-target="selected-price"> $$ </a>
+                      <a  class="dropdown-item" data-target="selected-price"> $$$ </a>
                     </div>
                   </div>
                 </div>
-              </h1>
+              
               <!--Button End/ Please Select A Price End-->
+              
 
+              <!--button for please select a food catagory-->
               <h1>
-                Please Select A Food Catagory
-                <div class="dropdown is-active">
+              Please Select A Food Catagory</h1>
+                <div class="dropdown">
                   <div class="dropdown-trigger">
                     <button
                       class="button"
                       aria-haspopup="true"
                       aria-controls="dropdown-menu"
                     >
-                      <span>Food Catagory</span>
+                      <span id="selected-catagory">Food Catagory</span>
                       <span class="icon is-small">
                         <i class="fas fa-angle-down" aria-hidden="true"></i>
                       </span>
@@ -94,23 +96,25 @@
                   </div>
                   <div class="dropdown-menu" id="dropdown-menu" role="menu">
                     <div class="dropdown-content">
-                      <a href="#" class="dropdown-item"> italian </a>
-                      <a class="dropdown-item"> Chinese </a>
-                      <a href="#" class="dropdown-item is-active"> Mexican </a>
+                      <a  class="dropdown-item" data-target="selected-catagory"> italian </a>
+                      <a class="dropdown-item" data-target="selected-catagory"> Chinese </a>
+                      <a class="dropdown-item" data-target="selected-catagory"> Mexican </a>
                     </div>
                   </div>
                 </div>
-              </h1>
+              
+              <!--button end/Please Select A Food Catagory End-->
               <h1>
-                Please Select A Dietary Restriction
-                <div class="dropdown is-active">
+                <!--button for Please Select A Dietary Restriction-->
+                Please Select A Dietary Restriction </h1>
+                <div class="dropdown">
                   <div class="dropdown-trigger">
                     <button
                       class="button"
                       aria-haspopup="true"
                       aria-controls="dropdown-menu"
                     >
-                      <span>Dietary Restriction</span>
+                      <span id="selected-restriction">Dietary Restriction</span>
                       <span class="icon is-small">
                         <i class="fas fa-angle-down" aria-hidden="true"></i>
                       </span>
@@ -118,21 +122,25 @@
                   </div>
                   <div class="dropdown-menu" id="dropdown-menu" role="menu">
                     <div class="dropdown-content">
-                      <a href="#" class="dropdown-item"> italian </a>
-                      <a class="dropdown-item"> Chinese </a>
-                      <a href="#" class="dropdown-item is-active"> Mexican </a>
+                      <a  class="dropdown-item" data-target="selected-price"> Vegitarian </a>
+                      <a class="dropdown-item" data-target="selected-price"> Gluten intolerence </a>
+                      <a  class="dropdown-item" data-target="selected-price"> Peanut Alergy</a>
                     </div>
                   </div>
                 </div>
-              </h1>
+              
             </div>
           </div>
+          <!--Button End/ Restaurant Preferences End-->
+          <!--Select A Restaurant Section Start-->
           <div class="column is-4">
             <h1 class="title is-5 notification is-primary">
               Select A Restaurant
             </h1>
             <div class="box has-background-primary"></div>
           </div>
+          <!--Select A restaurant Section End-->
+          <!--Your Favorites Section Start-->
           <div class="column is-4">
             <h1 class="title is-5 notification is-primary">Your Favorites</h1>
             <div class="box has-background-primary">
@@ -142,6 +150,7 @@
         </div>
       </div>
     </section>
+    <!--Your Favorites Section End-->
     <section></section>
     <script src="./assets/js/script.js"></script>
   </body>
