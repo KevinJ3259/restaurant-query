@@ -8,12 +8,14 @@ body {
       height: 400px;
     text-align: center;
     opacity: .96;
+    
 
   }
 h1 {
     margin:20px !important;
    font-family:serif;
    font-size: 25px;
+   color:azure
 
 }
 @media screen and (max-width:576px) {
