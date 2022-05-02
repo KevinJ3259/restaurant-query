@@ -1,6 +1,6 @@
 body {
     background-image: url("/assets/images/bac.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100%;
   }
 
@@ -40,6 +40,7 @@ h1 {
 @media screen and (max-width:1200px){
     body{
         background-size:150%;
+        background-repeat:repeat;
 
     }
 }

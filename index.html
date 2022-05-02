@@ -51,6 +51,56 @@
             </h1>
             <!--Box number 1-->
             <div class="box has-background-dark">
+               <!--button for please select a food catagory-->
+               <h1>Please Select A Food Catagory</h1>
+               <div class="dropdown">
+                 <div class="dropdown-trigger">
+                   <button
+                     class="button"
+                     aria-haspopup="true"
+                     aria-controls="dropdown-menu"
+                   >
+                     <span id="selected-catagory">Food Catagory</span>
+                     <span class="icon is-small">
+                       <i class="fas fa-angle-down" aria-hidden="true"></i>
+                     </span>
+                   </button>
+                 </div>
+                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                   <div class="dropdown-content">
+                     <a class="dropdown-item" data-target="selected-catagory">
+                       italian
+                     </a>
+                     <a class="dropdown-item" data-target="selected-catagory">
+                       Chinese
+                     </a>
+                     <a class="dropdown-item" data-target="selected-catagory">
+                       Mexican
+                     </a>
+                     <a class="dropdown-item" data-target="selected-catagory">
+                       French
+                     </a>
+                     <a class="dropdown-item" data-target="selected-catagory">
+                       Indian
+                     </a>
+                     <a class="dropdown-item" data-target="selected-catagory">
+                       Japanese
+                     </a>
+                     <a class="dropdown-item" data-target="selected-catagory">
+                       Seafood
+                     </a>
+                     <a class="dropdown-item" data-target="selected-catagory">
+                       Pizza
+                     </a>
+                     <a class="dropdown-item" data-target="selected-catagory">
+                       Steak
+                     </a>
+                    
+                  
+                     </a>
+                   </div>
+                 </div>
+               </div>
               <!--button for please select a price-->
               <h1>Please Select A Price</h1>
               <div class="dropdown">
@@ -82,65 +132,8 @@
               </div>
 
               <!--Button End/ Please Select A Price End-->
-
-              <!--button for please select a food catagory-->
-              <h1>Please Select A Food Catagory</h1>
-              <div class="dropdown">
-                <div class="dropdown-trigger">
-                  <button
-                    class="button"
-                    aria-haspopup="true"
-                    aria-controls="dropdown-menu"
-                  >
-                    <span id="selected-catagory">Food Catagory</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div class="dropdown-content">
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      italian
-                    </a>
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      Chinese
-                    </a>
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      Mexican
-                    </a>
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      French
-                    </a>
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      Indian
-                    </a>
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      Japanese
-                    </a>
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      Seafood
-                    </a>
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      Pizza
-                    </a>
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      Steak
-                    </a>
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      Thai
-                    </a>
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      Hamburger
-                    </a>
-                    <a class="dropdown-item" data-target="selected-catagory">
-                      American
-                    </a>
-                  </div>
-                </div>
-              </div>
-
               <!--button end/Please Select A Food Catagory End-->
+
               <!--button for Please Select A Dietary Restriction-->
               <h1>Please Select A Dietary Restriction</h1>
               <div class="dropdown">
@@ -161,10 +154,7 @@
                   
                     <a class="dropdown-item" data-target="selected-restriction">
                       Gluten intolerence
-                    </a>
-                    <a class="dropdown-item" data-target="selected-restriction">
-                      Lactose intolerence</a>
-                    
+                    </a> 
                     <a class="dropdown-item" data-target="selected-restriction">
                       Vegitarian</a>
                     <a class="dropdown-item" data-target="selected-restriction">
@@ -188,7 +178,7 @@
           <div class="column is-4">
             <h1 class="title is-5 notification is-dark">Your Favorites</h1>
             <!--box number 3-->
-            <div class="box has-background-dark" id="your-favorites ">
+            <div class="box has-background-dark" id="your-favorites">
               <h1>Insert Favorites Here</h1>
             </div>
           </div>
@@ -197,6 +187,11 @@
     </section>
     <!--Your Favorites Section End-->
     <section></section>
+    <footer class="footer has-background-dark">
+      <div class="content has-text-centered has-text-light">
+      <p>Copyright 2022 Restuarant Query</p>
+      </div>
+      </footer>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
