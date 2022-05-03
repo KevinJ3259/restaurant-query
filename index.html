@@ -12,6 +12,7 @@
       src="https://kit.fontawesome.com/3dd20164be.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/menuitemsearch.js" defer></script>
   </head>
 
   <body>
@@ -51,117 +52,18 @@
             </h1>
             <!--Box number 1-->
             <div class="box has-background-dark">
-               <!--button for please select a food catagory-->
-               <h1>Please Select A Food Catagory</h1>
-               <div class="dropdown">
-                 <div class="dropdown-trigger">
-                   <button
-                     class="button"
-                     aria-haspopup="true"
-                     aria-controls="dropdown-menu"
-                   >
-                     <span id="selected-catagory">Food Catagory</span>
-                     <span class="icon is-small">
-                       <i class="fas fa-angle-down" aria-hidden="true"></i>
-                     </span>
-                   </button>
-                 </div>
-                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                   <div class="dropdown-content">
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       italian
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Chinese
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Mexican
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       French
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Indian
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Japanese
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Seafood
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Pizza
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Steak
-                     </a>
-                    
-                  
-                     </a>
-                   </div>
-                 </div>
-               </div>
-              <!--button for please select a price-->
-              <h1>Please Select A Price</h1>
-              <div class="dropdown">
-                <div class="dropdown-trigger">
-                  <button
-                    class="button"
-                    aria-haspopup="true"
-                    aria-controls="dropdown-menu"
-                  >
-                    <span id="selected-price">Price</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
+              <form id="menu-item-search">
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <input class="input" type="text" placeholder="Search For A Menu Item" name="item-name">
+                </p>
+                <p class="control">
+                  <button class="button is-info">
+                    Search
                   </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div class="dropdown-content">
-                    <a class="dropdown-item" data-target="selected-price">
-                      $
-                    </a>
-                    <a class="dropdown-item" data-target="selected-price">
-                      $$
-                    </a>
-                    <a class="dropdown-item" data-target="selected-price">
-                      $$$
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!--Button End/ Please Select A Price End-->
-              <!--button end/Please Select A Food Catagory End-->
-
-              <!--button for Please Select A Dietary Restriction-->
-              <h1>Please Select A Dietary Restriction</h1>
-              <div class="dropdown">
-                <div class="dropdown-trigger">
-                  <button
-                    class="button"
-                    aria-haspopup="true"
-                    aria-controls="dropdown-menu"
-                  >
-                    <span id="selected-restriction">Dietary Restriction</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div class="dropdown-content">
-                  
-                    <a class="dropdown-item" data-target="selected-restriction">
-                      Gluten intolerence
-                    </a> 
-                    <a class="dropdown-item" data-target="selected-restriction">
-                      Vegitarian</a>
-                    <a class="dropdown-item" data-target="selected-restriction">
-                      Vegan</a>
-                  </div>
-                </div>
-              </div>
+                </p>
+              </div> 
+            </form> 
             </div>
           </div>
           <!--Button End/ Restaurant Preferences End-->
@@ -195,16 +97,118 @@
             <!--box number 4-->
             <div class="box has-background-dark" id="box-2">
               <h1>Recipe Search</h1>
-              <div class="field is-grouped">
-                <p class="control is-expanded">
-                  <input class="input" type="text" placeholder="Search For A Recipe">
-                </p>
-                <p class="control">
-                  <a class="button is-info">
-                    Search
-                  </a>
-                </p>
+              <!--button for please select a food catagory-->
+              <h1>Please Select A Food Catagory</h1>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button
+                    class="button"
+                    aria-haspopup="true"
+                    aria-controls="dropdown-menu"
+                  >
+                    <span id="selected-catagory">Food Catagory</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                    <a class="dropdown-item" data-target="selected-catagory">
+                      italian
+                    </a>
+                    <a class="dropdown-item" data-target="selected-catagory">
+                      Chinese
+                    </a>
+                    <a class="dropdown-item" data-target="selected-catagory">
+                      Mexican
+                    </a>
+                    <a class="dropdown-item" data-target="selected-catagory">
+                      French
+                    </a>
+                    <a class="dropdown-item" data-target="selected-catagory">
+                      Indian
+                    </a>
+                    <a class="dropdown-item" data-target="selected-catagory">
+                      Japanese
+                    </a>
+                    <a class="dropdown-item" data-target="selected-catagory">
+                      Seafood
+                    </a>
+                    <a class="dropdown-item" data-target="selected-catagory">
+                      Pizza
+                    </a>
+                    <a class="dropdown-item" data-target="selected-catagory">
+                      Steak
+                    </a>
+                   
+                 
+                    </a>
+                  </div>
+                </div>
               </div>
+             <!--button for please select a price-->
+             <h1>Please Select A Price</h1>
+             <div class="dropdown">
+               <div class="dropdown-trigger">
+                 <button
+                   class="button"
+                   aria-haspopup="true"
+                   aria-controls="dropdown-menu"
+                 >
+                   <span id="selected-price">Price</span>
+                   <span class="icon is-small">
+                     <i class="fas fa-angle-down" aria-hidden="true"></i>
+                   </span>
+                 </button>
+               </div>
+               <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                 <div class="dropdown-content">
+                   <a class="dropdown-item" data-target="selected-price">
+                     $
+                   </a>
+                   <a class="dropdown-item" data-target="selected-price">
+                     $$
+                   </a>
+                   <a class="dropdown-item" data-target="selected-price">
+                     $$$
+                   </a>
+                 </div>
+               </div>
+             </div>
+
+             <!--Button End/ Please Select A Price End-->
+             <!--button end/Please Select A Food Catagory End-->
+
+             <!--button for Please Select A Dietary Restriction-->
+             <h1>Please Select A Dietary Restriction</h1>
+             <div class="dropdown">
+               <div class="dropdown-trigger">
+                 <button
+                   class="button"
+                   aria-haspopup="true"
+                   aria-controls="dropdown-menu"
+                 >
+                   <span id="selected-restriction">Dietary Restriction</span>
+                   <span class="icon is-small">
+                     <i class="fas fa-angle-down" aria-hidden="true"></i>
+                   </span>
+                 </button>
+               </div>
+               <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                 <div class="dropdown-content">
+                 
+                   <a class="dropdown-item" data-target="selected-restriction">
+                     Gluten intolerence
+                   </a> 
+                   <a class="dropdown-item" data-target="selected-restriction">
+                     Vegitarian</a>
+                   <a class="dropdown-item" data-target="selected-restriction">
+                     Vegan</a>
+                 </div>
+               </div>
+             </div>
+              
             </div>
           </div>
           <!--Recipe Search Section End-->
@@ -223,7 +227,6 @@
     </section>
     <!--Your Recipes Section End-->
   
-    <script src="index.js"></script>
   </body>
   </html>
     
