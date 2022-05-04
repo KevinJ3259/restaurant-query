@@ -18,6 +18,9 @@ form.addEventListener("submit", async function (event) {
 
 function createMenuItem(menuItem) {
   const menuItemEl = document.createElement("div");
+  menuItemEl.addEventListener("click",()=>{
+    favorites.addFavorite(menuItem)
+  })
 
   const menuItemNameEl = document.createElement("div");
   menuItemNameEl.textContent = menuItem.title;

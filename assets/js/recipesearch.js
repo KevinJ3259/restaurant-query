@@ -19,6 +19,9 @@
     
     function createRecipe(recipe) {
       const recipeEl = document.createElement("div");
+      recipeEl.addEventListener("click",()=>{
+        favorites.addFavorite(recipe)
+      })
     
       const recipeNameEl = document.createElement("div");
       recipeNameEl.textContent = recipe.title;
