@@ -5,10 +5,11 @@ body {
   }
 
   .box {
-      height: 400px;
+      height: 100%;
     text-align: center;
     opacity: .90;
-    
+    overflow-y: auto;
+    max-height: 400px;
 
   }
   #box-2{

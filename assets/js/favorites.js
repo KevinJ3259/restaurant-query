@@ -1,5 +1,6 @@
 const favorites = (function () {
     const favoritesEl=document.getElementById("your-favorites")
+    dragMenuItem(favoritesEl)
   const favoritesCache = JSON.parse(localStorage.getItem("favorites") || "[]");
 favoritesCache.forEach(createMenuItem)
 
@@ -10,7 +11,7 @@ favoritesCache.forEach(createMenuItem)
   }
   function createMenuItem(menuItem) {
     const menuItemEl = document.createElement("div");
-
+    dragMenuItem(menuItemEl, menuItem) 
     const menuItemNameEl = document.createElement("div");
     menuItemNameEl.textContent = menuItem.title;
     menuItemEl.appendChild(menuItemNameEl);
