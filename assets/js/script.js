@@ -1,3 +1,4 @@
+const apiKey = "3dda98fa1ab845c5b8da209e969f31ae";
 // mobile menu
 const selectIcon = document.querySelector("#select");
 const navbarMenu = document.querySelector("#nav-links");

@@ -1,17 +1,15 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant Query</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/3dd20164be.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
+    <script src="https://kit.fontawesome.com/3dd20164be.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/menuitemsearch.js" defer></script>
+    <script src="./assets/js/recipesearch.js" defer></script>
+    <script src="./assets/js/favorites.js" defer></script>
   </head>
 
   <body>
@@ -19,11 +17,7 @@
       <!-- logo / brand -->
       <div class="navbar-brand">
         <a class="navbar-item">
-          <img
-            src="./assets/images/restaurant-query.png " alt="brand-logo"
-            style="max-height: 100px"
-            class="py-2 px-2"
-          />
+          <img src="./assets/images/restaurant-query.png " alt="brand-logo" style="max-height: 100px" class="py-2 px-2" />
         </a>
         <a class="navbar-burger" id="select">
           <span></span>
@@ -35,7 +29,7 @@
       <div class="navbar-menu" id="nav-links">
         <!--  NavBar right links -->
         <div class="navbar-end">
-          <a href="#restaurant-preferences" class="navbar-item" > Restaurant Preferences</a>
+          <a href="#restaurant-preferences" class="navbar-item"> Restaurant Preferences</a>
           <a href="#select-a-restaurant" class="navbar-item">Select A Resraurant</a>
           <a href="#your-favorites" class="navbar-item"> Your Favorites</a>
         </div>
@@ -46,132 +40,27 @@
       <div class="container">
         <div class="columns">
           <div class="column is-4">
-            <h1 class="title is-5 notification is-dark" id="restaurant-preferences" >
-              Restaurant Preferences
-            </h1>
+            <h1 class="title is-5 notification is-dark" id="restaurant-preferences">Restaurant Preferences</h1>
             <!--Box number 1-->
             <div class="box has-background-dark">
-               <!--button for please select a food catagory-->
-               <h1>Please Select A Food Catagory</h1>
-               <div class="dropdown">
-                 <div class="dropdown-trigger">
-                   <button
-                     class="button"
-                     aria-haspopup="true"
-                     aria-controls="dropdown-menu"
-                   >
-                     <span id="selected-catagory">Food Catagory</span>
-                     <span class="icon is-small">
-                       <i class="fas fa-angle-down" aria-hidden="true"></i>
-                     </span>
-                   </button>
-                 </div>
-                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                   <div class="dropdown-content">
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       italian
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Chinese
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Mexican
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       French
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Indian
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Japanese
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Seafood
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Pizza
-                     </a>
-                     <a class="dropdown-item" data-target="selected-catagory">
-                       Steak
-                     </a>
-                    
-                  
-                     </a>
-                   </div>
-                 </div>
-               </div>
-              <!--button for please select a price-->
-              <h1>Please Select A Price</h1>
-              <div class="dropdown">
-                <div class="dropdown-trigger">
-                  <button
-                    class="button"
-                    aria-haspopup="true"
-                    aria-controls="dropdown-menu"
-                  >
-                    <span id="selected-price">Price</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
+              <form id="menu-item-search">
+                <div class="field is-grouped">
+                  <p class="control is-expanded">
+                    <input class="input" type="text" placeholder="Search For A Menu Item" name="item-name" />
+                  </p>
+                  <p class="control">
+                    <button class="button is-info">Search</button>
+                  </p>
                 </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div class="dropdown-content">
-                    <a class="dropdown-item" data-target="selected-price">
-                      $
-                    </a>
-                    <a class="dropdown-item" data-target="selected-price">
-                      $$
-                    </a>
-                    <a class="dropdown-item" data-target="selected-price">
-                      $$$
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!--Button End/ Please Select A Price End-->
-              <!--button end/Please Select A Food Catagory End-->
-
-              <!--button for Please Select A Dietary Restriction-->
-              <h1>Please Select A Dietary Restriction</h1>
-              <div class="dropdown">
-                <div class="dropdown-trigger">
-                  <button
-                    class="button"
-                    aria-haspopup="true"
-                    aria-controls="dropdown-menu"
-                  >
-                    <span id="selected-restriction">Dietary Restriction</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div class="dropdown-content">
-                  
-                    <a class="dropdown-item" data-target="selected-restriction">
-                      Gluten intolerence
-                    </a> 
-                    <a class="dropdown-item" data-target="selected-restriction">
-                      Vegitarian</a>
-                    <a class="dropdown-item" data-target="selected-restriction">
-                      Vegan</a>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
           <!--Button End/ Restaurant Preferences End-->
           <!--Select A Restaurant Section Start-->
           <div class="column is-4">
-            <h1 class="title is-5 notification is-dark" id="select-a-restaurant">
-              Select A Restaurant
-            </h1>
+            <h1 class="title is-5 notification is-dark" id="select-a-restaurant">Select A Dish</h1>
             <!--Box number 2-->
-            <div class="box has-background-dark"></div>
+            <div class="box has-background-dark" id="restaurants"></div>
           </div>
           <!--Select A restaurant Section End-->
           <!--Your Favorites Section Start-->
@@ -179,7 +68,7 @@
             <h1 class="title is-5 notification is-dark">Your Favorites</h1>
             <!--box number 3-->
             <div class="box has-background-dark" id="your-favorites">
-              <h1>Insert Favorites Here</h1>
+              
             </div>
           </div>
         </div>
@@ -193,40 +82,95 @@
         <div class="columns">
           <div class="column is-6">
             <!--box number 4-->
-            <div class="box has-background-dark" id="box-2">
+            <div class="box has-background-dark">
               <h1>Recipe Search</h1>
-              <div class="field is-grouped">
-                <p class="control is-expanded">
-                  <input class="input" type="text" placeholder="Search For A Recipe">
-                </p>
-                <p class="control">
-                  <a class="button is-info">
-                    Search
-                  </a>
-                </p>
-              </div>
+              <form id="recipe-search">
+                <!--button for please select a food catagory-->
+                <h1>Please Select A Food Catagory</h1>
+                <div class="select">
+                  <select name="cuisine">
+                    <option>Italian</option>
+                    <option>Chinese</option>
+                    <option>Mexican</option>
+                    <option>French</option>
+                    <option>Indian</option>
+                    <option>Japanese</option>
+                    <option>Cajun</option>
+                    <option>Vietnamese</option>
+                    <option>Irish</option>
+                  </select>
+                </div>
+                <!-- <div class="dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span id="selected-catagory">Food Catagory</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu-cuisine" role="menu">
+                    <div class="dropdown-content">
+                      <a class="dropdown-item" data-target="selected-catagory"> Italian </a>
+                      <a class="dropdown-item" data-target="selected-catagory"> Chinese </a>
+                      <a class="dropdown-item" data-target="selected-catagory"> Mexican </a>
+                      <a class="dropdown-item" data-target="selected-catagory"> French </a>
+                      <a class="dropdown-item" data-target="selected-catagory"> Indian </a>
+                      <a class="dropdown-item" data-target="selected-catagory"> Japanese </a>
+                      <a class="dropdown-item" data-target="selected-catagory"> Cajun </a>
+                      <a class="dropdown-item" data-target="selected-catagory"> Vietnamese </a>
+                      <a class="dropdown-item" data-target="selected-catagory"> Irish </a>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!--Button End/ Please Select A Price End-->
+                <!--button end/Please Select A Food Catagory End-->
+
+                <!--button for Please Select A Dietary Restriction-->
+                <h1>Please Select A Dietary Restriction</h1>
+                <div class="select">
+                  <select name="diet">
+                    <option>Gluten Free</option>
+                    <option>Vegetarian</option>
+                    <option>Vegan</option>
+                  </select>
+                </div>
+                <!-- <div class="dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                      <span id="selected-restriction">Dietary Restriction</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu-diet" role="menu">
+                    <div class="dropdown-content">
+                      <a class="dropdown-item" data-target="selected-restriction"> Gluten Free </a>
+                      <a class="dropdown-item" data-target="selected-restriction"> Vegetarian</a>
+                      <a class="dropdown-item" data-target="selected-restriction"> Vegan</a>
+                    </div>
+                  </div>
+                </div> -->
+                <button>Search</button>
+              </form>
             </div>
           </div>
           <!--Recipe Search Section End-->
           <!--Your Recipes Section Start-->
           <div class="column is-6">
             <!--box number 5-->
-            <div class="box has-background-dark"id=box-2>
+            <div class="box has-background-dark">
               <h1>Your Recipes</h1>
-              <p></p>
+              <div id="recipes"></div>
             </div>
           </div>
-          
-           
-          </div>
         </div>
+      </div>
     </section>
     <!--Your Recipes Section End-->
-  
-    <script src="index.js"></script>
-  </body>
-  </html>
-    
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
