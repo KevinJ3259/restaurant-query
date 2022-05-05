@@ -8,6 +8,7 @@ function dragMenuItem(menuItemNode, menuItem) {
         e.dataTransfer.effectAllowed = 'move';
         
         e.dataTransfer.setData('text/html', this.innerHTML);
+        e.dataTransfer.setData('menuItem', JSON.stringify(menuItem));
         
         previousHtml = document.getElementById("your-favorites").innerHTML
          document.getElementById("your-favorites").innerHTML=""   }
@@ -32,12 +33,14 @@ function dragMenuItem(menuItemNode, menuItem) {
         this.classList.remove('over');
       }
       function handleDrop(e) {
-          debugger
+          
         e.stopPropagation(); // stops the browser from redirecting.
         if (menuItemNode === e.target && !menuItem)
         {
            menuItemNode.innerHTML=menuItemNode.innerHTML||"" 
-            menutItemNode.innerHTML+=e.dataTransfer.getData('text/html');}
+            menuItemNode.innerHTML+=e.dataTransfer.getData('text/html');
+            favorites.addFavorite(JSON.parse(e.dataTransfer.getData("menuItem")))
+        }
 
         return false;
 

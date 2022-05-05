@@ -7,7 +7,7 @@ favoritesCache.forEach(createMenuItem)
   function addFavorite(favorite) {
     favoritesCache.push(favorite);
     localStorage.setItem("favorites", JSON.stringify(favoritesCache));
-    createMenuItem(favorite)
+   // createMenuItem(favorite)
   }
   function createMenuItem(menuItem) {
     const menuItemEl = document.createElement("div");
