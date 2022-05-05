@@ -21,7 +21,8 @@ function createMenuItem(menuItem) {
   menuItemEl.addEventListener("click",()=>{
     favorites.addFavorite(menuItem)
   })
-
+  dragMenuItem(menuItemEl, menuItem)
+  
   const menuItemNameEl = document.createElement("div");
   menuItemNameEl.textContent = menuItem.title;
   menuItemEl.appendChild(menuItemNameEl);

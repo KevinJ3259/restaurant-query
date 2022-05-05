@@ -1,16 +1,17 @@
 const favorites = (function () {
     const favoritesEl=document.getElementById("your-favorites")
+    dragMenuItem(favoritesEl)
   const favoritesCache = JSON.parse(localStorage.getItem("favorites") || "[]");
 favoritesCache.forEach(createMenuItem)
 
   function addFavorite(favorite) {
     favoritesCache.push(favorite);
     localStorage.setItem("favorites", JSON.stringify(favoritesCache));
-    createMenuItem(favorite)
+   // createMenuItem(favorite)
   }
   function createMenuItem(menuItem) {
     const menuItemEl = document.createElement("div");
-
+    dragMenuItem(menuItemEl, menuItem) 
     const menuItemNameEl = document.createElement("div");
     menuItemNameEl.textContent = menuItem.title;
     menuItemEl.appendChild(menuItemNameEl);
